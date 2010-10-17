@@ -1,0 +1,183 @@
+<menuConfig>
+	<menu name="1">
+		<div class="zweite_zeile">
+			<ul class="navi_top_abschnitt">
+				<li class="first">
+					<a class="navi_oben_swv" title="Software-Verzeichnis" href="/software/">
+						<span>Software/</span>
+						Download
+					</a>
+				</li>
+
+				<li>
+					<a title="heise jobs" class="navi_oben_job" href="/jobs/">Stellenangebote
+					</a>
+				</li>
+
+				<li>
+					<a class="navi_oben_pvg" title="Preisvergleich" href="/preisvergleich/">Preisvergleich
+					</a>
+				</li>
+				<li>
+					<a class="navi_oben_tarifr" title="Tarifrechner" href="/tarifrechner/">Tarifrechner
+					</a>
+				</li>
+				<li>
+					<a class="navi_oben_itm" title="IT-Markt" href="/itmarkt/">IT-Markt</a>
+				</li>
+			</ul>
+			<ul class="navi_top_abschnitt">
+				<li>
+					<a title="heise-marktplatz" href="http://www.heise-marktplatz.de/">heise-marktplatz</a>
+				</li>
+				<li>
+					<a class="navi_oben_eve" title="heise Events" href="/events/">
+						<span>heise </span>
+						Veranstaltungen
+					</a>
+				</li>
+				<li>
+					<a class="navi_oben_whi" title="heise Whitepapers" href="/whitepapers/">
+						<span>heise </span>
+						Whitepapers
+					</a>
+				</li>
+				<li>
+					<a class="navi_oben_abo" title="Zeitschriften-Abo" href="/abo/">Abo&amp;Heft
+					</a>
+				</li>
+				<li>
+					<a class="navi_oben_kio" title="Zeitschriften-Archiv" href="/kiosk/">Archiv
+					</a>
+				</li>
+			</ul>
+		</div>
+	</menu>
+	<menu name="2">
+		<table width="920" cellspacing="0" cellpadding="0" border="0"
+			id="header_nav_main">
+			<tbody>
+				<tr class="nav_main_line">
+					<td>
+						<img width="10" height="1" src="/_img/allg/spacer.gif" />
+					</td>
+					<td>
+						<img width="10" height="1" src="/_img/allg/spacer.gif" />
+					</td>
+					<td>
+						<img width="10" height="1" src="/_img/allg/spacer.gif" />
+					</td>
+					<td>
+						<img width="10" height="1" src="/_img/allg/spacer.gif" />
+					</td>
+					<td>
+						<img width="10" height="1" src="/_img/allg/spacer.gif" />
+					</td>
+					<td>
+						<img width="10" height="1" src="/_img/allg/spacer.gif" />
+					</td>
+				</tr>
+				<tr class="nav_main_all">
+					<td width="145" height="24" class="nav_main_left">
+						<a href="/index.php">Unternehmen</a>
+					</td>
+					<td width="145" height="24" class="nav_main_left">
+						<a href="/knowhow/">Branchen / Know-how</a>
+					</td>
+					<td width="145" height="24" class="nav_main_left">
+						<a href="/services/">Dienstleistungen</a>
+					</td>
+					<td width="145" height="24" class="nav_main_left">
+						<a href="/loesungen/">Lösungen</a>
+					</td>
+					<td width="145" height="24" class="nav_main_left">
+						<a href="/aktuelles/">Infos
+							/ News</a>
+					</td>
+					<td height="24" class="nav_main_right">
+						<a href="javascript:error_language_sister('en')">English</a>
+						|
+						<a href="/gebit/kontakt.php"> Kontakt</a>
+						|
+						<a href="/gebit/impressum.php">Impressum</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</menu>
+	<menu name="3">
+		<ul id="mainMenu">
+			<li class="activePage activePageChildless">
+				<a href="index.html">Home</a>
+			</li>
+			<li class="">
+				<a href="aktuell/Aktuell.html">Aktuelles</a>
+			</li>
+			<li class="">
+				<a href="wirueberuns/WirUeberUns.html">Wir über uns</a>
+			</li>
+			<li class="">
+				<a href="huehner/Huehner.html">Hühner</a>
+				<ul style="display: none;">
+					<li class="">
+						<a href="huehner/Hampshire.html">New Hampshire</a>
+					</li>
+					<li class="">
+						<a href="huehner/Welsumer.html">Welsumer</a>
+					</li>
+					<li class="">
+						<a href="huehner/Sussex.html">Sussex</a>
+					</li>
+					<li class="">
+						<a href="huehner/Italiener.html">Italiener</a>
+					</li>
+					<li class="">
+						<a href="huehner/GrueneEierleger.html">Grüne Eierleger</a>
+					</li>
+					<li class="">
+						<a href="huehner/Marans.html">Marans</a>
+					</li>
+					<li class="">
+						<a href="huehner/Bielefelder.html">Bielefelder</a>
+					</li>
+					<li class="">
+						<a href="huehner/Seidenhuehner.html">Seidenhühner</a>
+					</li>
+					<li class="">
+						<a href="huehner/Weisshauben.html">Holl. Weißhauben</a>
+					</li>
+				</ul>
+			</li>
+			<li class="">
+				<a href="gaense/Gaense.html">Gänse</a>
+				<ul style="display: none;">
+					<li class="">
+						<a href="gaense/Toulouser.html">Toulouser</a>
+					</li>
+					<li class="">
+						<a href="gaense/Emdener.html">Emdener</a>
+					</li>
+					<li class="">
+						<a href="gaense/Pommern.html">Pommern</a>
+					</li>
+					<li class="">
+						<a href="gaense/Hoecker.html">Höcker</a>
+					</li>
+				</ul>
+			</li>
+			<li class="">
+				<a href="versand/Versand.html">Versand &amp; Abholung</a>
+			</li>
+			<li class="">
+				<a href="kontakt/Kontakt.html">Kontakt &amp; Anfahrt</a>
+			</li>
+			<li class="">
+				<a href="preisliste/Preisliste.html">Preisliste</a>
+			</li>
+			<li class="">
+				<a href="links/Links.html">Links</a>
+			</li>
+		</ul>
+	</menu>
+
+</menuConfig>

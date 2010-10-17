@@ -1,0 +1,32 @@
+WebsiteGenerator version history
+----------------------------------
+
+Version SNAPSHOT
+-----------------
++ Introduced basic support for menus
+
+Version 2.1.1
+--------------
++ Navigation Images
++ Optimization of gallery HTML for better stylabillity
+
+Version 2.1.0
+--------------
++ Velocity support removed
++ Settings introduced
++ Sort order for galleries introduced
+
+Version 2.0.1
+--------------
++ Configurable Thumbnail file extension
++ style attribute with width settings for gallery tables
++ Duplicate element id wsgImagePanel removed
+
+Version 2.0.0
+--------------
++ Template inclusion using GroovyTemplatingSupport
++ Introduced image gallery support
+
+Version 1.0.0
+--------------
+- Groovy and Velocity based templating

@@ -1,0 +1,9 @@
+import org.patterson.*;
+import org.patterson.gallery.*;
+
+public class TestProcessor implements Processor{
+	public void process(WebsiteGenerator aGenerator, java.io.File aFile) throws IOException, WebsiteGeneratorException {
+		GenerateGalleryProcessor tempProcessor = new GenerateGalleryProcessor();
+		tempProcessor.process(aGenerator, aFile);
+	}
+}

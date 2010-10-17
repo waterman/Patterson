@@ -1,0 +1,3 @@
+++ Gallery
+
++ direct navigation on index pages to all other index pages ([1], [2], [3])

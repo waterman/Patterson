@@ -1,0 +1,4 @@
+<% binding.put('title','Hello Title') %>
+${templateSupport.evalTemplate(binding,'${srcDir}/includes/header.templ')}
+		<h1>Hello World!</h1> 
+${templateSupport.evalTemplate(null,'${srcDir}/includes/footer.templ')} 
