@@ -1,0 +1,15 @@
+    <div id="sbar-wrap">
+      <div id="sbar">
+        <div class="widgetspace">
+          <h1>Sidebar Links</h1>
+          <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="http://teachmelinux.googlepages.com">Teach Me Linux</a></li>
+            <li><a href="http://deviantart.com">deviantART</a></li>
+            <li><a href="http://gigacore.deviantart.com">Gigacore</a></li>
+            <li><a href="http://digg.com/">Digg</a></li>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>

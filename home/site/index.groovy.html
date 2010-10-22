@@ -1,0 +1,11 @@
+<% binding['includeIntro'] = true %>
+<% binding['selectedMainMenu'] = 'home' %>
+${templateSupport.evalTemplate(binding,'${srcDir}/includes/header.include')}
+
+    <div id="homecontent">
+      <h2>Latest Post</h2>
+      <img src="assets/ff.jpg" alt="firefox" align="left" class="float-left" />You can preview the latest post on your blog/news page here and link to it on that page. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce velit  pede, lacinia eu, tempor nec, vestibulum non, dolor. Aenean malesuada  laoreet lacus. Vivamus lementum, felis ac ullamcorper blandit, neque  erat porttitor lorem, non aliqfet quam magna ac enim. Morbi tempus odio  eu lorem. Quisque volutpat, odio id gravida commodo, turpis orci  consequat augue, eget dignissim odio tellus et lacus. Nulla nulla nisl,  porta eu, ullamcorper vitae, facilisis in, nulla.Curabitur a pede.  Mauris at metus quis nulla eleifend pharetra.
+    </div>
+
+    
+${templateSupport.evalTemplate(binding,'${srcDir}/includes/footer.include')}

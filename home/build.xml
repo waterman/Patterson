@@ -1,0 +1,27 @@
+<project name="Patterson Homepage" default="build" basedir=".">
+
+	<path id="classpath">
+		<fileset dir="lib">
+			<include name="*.jar" />
+		</fileset>
+
+	</path>
+
+	<!-- ================================= 
+          target: build              
+         ================================= -->
+	<target name="build" depends="generate" description="Builds the entire site locally">
+
+	</target>
+
+	<!-- ================================= 
+          target: generate              
+         ================================= -->
+	<target name="generate" depends="" description="Generates the site locally">
+		<echo>Log file: ${basedir}/lib/logging.properties</echo>
+		<java classname="org.patterson.WebsiteGenerator" classpathref="classpath">
+			<sysproperty key="java.util.logging.config.file" value="${basedir}/lib/logging.properties"/>
+		</java>
+	</target>
+
+</project>

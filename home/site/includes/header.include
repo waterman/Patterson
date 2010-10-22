@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="${generator.calulateRelativeUrlFromCurrentResourceTo('${srcDir}/assets/style.css')}" media="all"  />
+<!-- WIN IE Style Sheets -->
+<!--[if IE]>
+  <![if gte IE 5.5]>
+   <![if gte IE 7]><link rel="stylesheet" 
+	type="text/css" media="screen,projection" 
+	href="${generator.calulateRelativeUrlFromCurrentResourceTo('${srcDir}/assets/ie.css')}" />
+	<![endif]>
+   <![if lt IE 7]><link rel="stylesheet" 
+	type="text/css" media="screen,projection" 
+	href="${generator.calulateRelativeUrlFromCurrentResourceTo('${srcDir}/ie.css')}" />
+	<![endif]>
+  <![endif]>
+  <![if lt IE 5.5]>
+   <link rel="stylesheet"
+	type="text/css" media="screen,projection" 
+	href="${generator.calulateRelativeUrlFromCurrentResourceTo('${srcDir}/assets/ie.css')}" />
+    <![endif]>
+<![endif]-->
+<title>Patterson</title>
+</head>
+<body>
+<div id="wrap">
+  <div id="header">
+    <div id="title"><img src="${generator.calulateRelativeUrlFromCurrentResourceTo('${srcDir}/assets/Logo.gif')}"/></div>
+    <div id="tagline">A programmers (webpage) generator using Groovy templates</div>
+  </div>
+  <div id="nav">
+  
+  	<% if (binding['selectedMainMenu'] != null) { %>
+  		<% generator.getMenuManager().getMenu('main').on("//li[@id='"+binding['selectedMainMenu']+"']").setAttributes(new org.patterson.menu.Attribute('class','selected')) %>
+  	<% }%>
+  	
+    ${generator.getMenuManager().getMenu('main').asText(binding)}
+  </div>
+
+	<% if (binding['includeIntro'] != null && binding['includeIntro'] == true) { %>
+		${templateSupport.evalTemplate(binding,'${srcDir}/includes/intro.include')}
+    <% }%>
+    
+  <div id="content-wrap">
+  ${templateSupport.evalTemplate(binding,'${srcDir}/includes/sidebar.include')}
+  
+      <div id="homecontent">
+  

@@ -249,17 +249,18 @@ public class WebsiteGenerator {
 	}
 
 	public static void main(String[] args) throws WebsiteGeneratorException, IOException, ConfigurationException {
+		WebsiteGenerator tempGenerator;
 		if (args.length != 1) {
-			System.out.println("Path to property file required.");
-			System.exit(-1);
+			tempGenerator = new WebsiteGenerator(new Properties());
+		} else {
+			InputStream tempIn;
+			try {
+				tempIn = new FileInputStream(args[0]);
+			} catch (FileNotFoundException e) {
+				throw new WebsiteGeneratorException("Properties file '" + args[0] + "' not found.", e);
+			}
+			tempGenerator = new WebsiteGenerator(tempIn);
 		}
-		InputStream tempIn;
-		try {
-			tempIn = new FileInputStream(args[0]);
-		} catch (FileNotFoundException e) {
-			throw new WebsiteGeneratorException("Properties file '" + args[0] + "' not found.", e);
-		}
-		WebsiteGenerator tempGenerator = new WebsiteGenerator(tempIn);
 		tempGenerator.generate();
 	}
 

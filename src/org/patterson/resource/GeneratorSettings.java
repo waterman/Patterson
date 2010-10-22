@@ -51,8 +51,8 @@ public class GeneratorSettings extends AbstractSettings {
 	 * @throws IOException
 	 */
 	public GeneratorSettings(Properties aProps) throws IOException {
-		srcDir = aProps.getProperty(KEY_SRC_DIR);
-		targetDir = aProps.getProperty(KEY_TARGET_DIR);
+		srcDir = aProps.getProperty(KEY_SRC_DIR, "site");
+		targetDir = aProps.getProperty(KEY_TARGET_DIR, "build");
 		srcDirFile = srcDir == null ? null : new File(srcDir);
 		properties = aProps;
 	}
