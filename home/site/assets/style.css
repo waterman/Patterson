@@ -557,3 +557,46 @@ ul span, ol span {
 	clear:both;
 	overflow: hidden;
 }
+
+
+table.datatable{
+	border-spacing: 0px;
+	border-right: 1px solid #e2e2e2;
+}
+
+table.datatable tbody tr th{
+	background-color: #666666;
+	color: #ffffff;
+	border-bottom: 1px solid #e2e2e2;
+	border-left: 1px solid #e2e2e2;
+}
+table.datatable tbody tr td{
+	border-bottom: 1px solid #e2e2e2;
+	border-left: 1px solid #e2e2e2;
+}
+
+table.datatable tbody tr td, table.datatable tbody tr th {
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+table.datatable tbody tr.odd{
+
+}
+
+
+table.datatable tbody tr.even{
+	background-color: #f4f4f4;
+}
+
+.inlineComment{
+	color: #009900;
+}
+
+pre.sample{
+	background-color: #F4F4F4;
+	border: 1px solid #E2E2E2;
+	padding-top: 5px;
+}

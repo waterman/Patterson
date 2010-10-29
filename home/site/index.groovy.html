@@ -2,10 +2,27 @@
 <% binding['selectedMainMenu'] = 'home' %>
 ${templateSupport.evalTemplate(binding,'${srcDir}/includes/header.include')}
 
-    <div id="homecontent">
-      <h2>Latest Post</h2>
-      <img src="assets/ff.jpg" alt="firefox" align="left" class="float-left" />You can preview the latest post on your blog/news page here and link to it on that page. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Fusce velit  pede, lacinia eu, tempor nec, vestibulum non, dolor. Aenean malesuada  laoreet lacus. Vivamus lementum, felis ac ullamcorper blandit, neque  erat porttitor lorem, non aliqfet quam magna ac enim. Morbi tempus odio  eu lorem. Quisque volutpat, odio id gravida commodo, turpis orci  consequat augue, eget dignissim odio tellus et lacus. Nulla nulla nisl,  porta eu, ullamcorper vitae, facilisis in, nulla.Curabitur a pede.  Mauris at metus quis nulla eleifend pharetra.
-    </div>
-
-    
+	<h2>Motivation - a little bit of history...</h2>
+    Why another template engine? The answer lays in my past experiences: Depending on what you need, creating small homepages can be quite hard:
+    <ul>
+    <li> 
+    Tools for generating static HTML pages are usually made for users without HTML knowledge. 
+    These tools are typically less flexible, because the rely on certain custom templates formats. 
+    </li>   
+    <li>
+    CMS like Drupal, Joomla, Wordpress etc. are usually oversized for small sites: To get what you want, you have to customize themes, need deep knowledge of the respective CMS. 
+    Some features, likes image galleries, are usually not part of the core system, but require plugins, which require certain version of the core and even worse: often dont provide the expected behaviour out of the box.
+    Furthermore: For deployment, you need a more expensive hosting solution including database access and you have to be aware of security issues, must upgrade to new versions on every security hole.
+    Keeping backups of your data also requires much work.
+    </li>
+    <li>
+    Using online services like blogs, you are tied to the features of the bloging software, usually less flexible in Look and Feel and you have to hand out your content to third-parties, which might not be what you want.
+    </li>
+    <li>
+    When hand crafting HTML pages, you have no template or include mechanism (apart from HTML-Frames) and you are forced to create HTML pages using copy-and-paste, which is a nightmare to maintain.
+    </li>
+    </ul>
+    <p>
+    So, frustrated from the solutions above, I decided to write a generator for static websites including a simple template mechanism. Patterson was born... ;-) 
+    </p>
 ${templateSupport.evalTemplate(binding,'${srcDir}/includes/footer.include')}

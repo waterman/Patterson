@@ -6,6 +6,10 @@
 					<a
 						href="${generator.calulateRelativeUrlFromCurrentResourceTo('${srcDir}/index.html')}">Home</a>
 				</li>
+				<li id="userguide">
+					<a
+						href="${generator.calulateRelativeUrlFromCurrentResourceTo('${srcDir}/userguide/userguide.html')}">Userguide</a>
+				</li>
 				<li id="documentation">
 					<a
 						href="${generator.calulateRelativeUrlFromCurrentResourceTo('${srcDir}/documentation/documentation.html')}">Documentation</a>

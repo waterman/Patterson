@@ -1,0 +1,39 @@
+<% binding['selectedMainMenu'] = 'userguide' %>
+${templateSupport.evalTemplate(binding,'${srcDir}/includes/header.include')} 
+    
+    <h2>Quickstart</h2>
+    <h3>Structure of resources</h3>
+    <p>
+    To generate a website using Patterson you organize the files making up your site in in source directory. 
+    The layout of the source directory corresponds to the directory structure of the finally generated site. 
+    Patterson walks along the source directory and copies the files to a target directory. 
+    Files which are recognized as templates are evaluated before copied.
+    </p>
+    The default directory structure for Patterson is as follows:
+    <pre class="sample">
+    +--+ site/ <span class="inlineComment">/*default source folder containing the templates and resources*/</span>
+       +--+ myFolder1/
+          +-- myFile1.groovy.html
+          +-- myImage1.gif  
+    +--+ build/ <span class="inlineComment">/*default target folder containing the finally generated site*/</span>
+       +--+ myFolder1/
+          +-- myFile1.html
+          +-- myImage1.gif
+    +-- build.xml <span class="inlineComment">/*optional ant build file, calling the generator*/</span>
+    </pre>
+    <h3>Template processing</h3>
+    <p>Patterson assumes, that files in the source directory having a name like &lt;filename&gt;.groovy.&lt;extension&gt; 
+    are Groovy templates. These templates are evaluated, the ".groovy" part of the filename is removed and the result of the template
+    is copied to its corresponding folder in the target folder.
+    </p>  
+    <h3>Template features</h3>
+    <p>
+    Groovy templates are a mixture of plain target content and Groovy code. The Groovy code typically adds content dynamically.
+    Several helper Objects are available in the context of each template:
+    <table class="datatable">
+    	<tr class="odd"><th>Variable name</th><th>Description</th></tr>
+    	<tr class="even"><td>generator</td><td>The generator object itself, providing access to the entire generator runtime</td></tr>
+    	<tr class="odd"><td>templateSupport</td><td>Providing methods usefull for templates</td></tr>
+    </table> 
+    </p>
+${templateSupport.evalTemplate(binding,'${srcDir}/includes/footer.include')}
