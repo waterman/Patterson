@@ -1,0 +1,18 @@
+  <div id="intro">
+    <div id="intro-msg">
+      <h1>Welcome to Patterson</h1>
+      <p><strong>Patterson</strong> is a generator, typically for static websites. The generator features:</p>
+      <ul>
+      	<li>resources to be Groovy templates, making it extremely flexible</li>
+      	<li>an multi-level "include" mechanism for templates, enabling re-use of page fragments</li>
+      	<li>support for generating image galleries</li>
+      	<li>simple menu building facility</li>
+      	<li>relative link target calculation, required when re-using templates from different locations</li>
+      </ul>
+    </div>
+    <div id="intro-pic">
+      <div align="left">
+      	<img src="assets/intro-pic.png" alt="intro" />
+      </div>
+    </div>
+  </div>

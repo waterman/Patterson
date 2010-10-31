@@ -1,80 +1,149 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
-	<title>waterman/Patterson @ GitHub</title>
-	
-	<style type="text/css">
-		body {
-  		margin-top: 1.0em;
-  		background-color: #d1d1d1;
-		  font-family: "Helvetica,Arial,FreeSans";
-  		color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-		h1 { font-size: 3.8em; color: #2e2e2e; margin-bottom: 3px; }
-		h1 .small { font-size: 0.4em; }
-		h1 a { text-decoration: none }
-		h2 { font-size: 1.5em; color: #2e2e2e; }
-    h3 { text-align: center; color: #2e2e2e; }
-    a { color: #2e2e2e; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-		pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-	</style>
-	
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="assets/style.css" media="all"  />
+<!-- WIN IE Style Sheets -->
+<!--[if IE]>
+  <![if gte IE 5.5]>
+   <![if gte IE 7]><link rel="stylesheet" 
+	type="text/css" media="screen,projection" 
+	href="assets/ie.css" />
+	<![endif]>
+   <![if lt IE 7]><link rel="stylesheet" 
+	type="text/css" media="screen,projection" 
+	href="ie.css" />
+	<![endif]>
+  <![endif]>
+  <![if lt IE 5.5]>
+   <link rel="stylesheet"
+	type="text/css" media="screen,projection" 
+	href="assets/ie.css" />
+    <![endif]>
+<![endif]-->
+<title>Patterson</title>
 </head>
-
 <body>
-  <a href="http://github.com/waterman/Patterson"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+<div id="wrap">
+  <div id="header">
+    <div id="title"><img src="assets/Logo.gif"/></div>
+    <div id="tagline">A programmers (webpage) generator using Groovy templates</div>
+  </div>
+  <div id="nav">
+  
+  	
+  		
+  	
+  	
+    <?xml version="1.0" encoding="UTF-8"?>
 
-  <div id="container">
+		<?xml version="1.0" encoding="UTF-8"?>
+<div id="nbar">
+			<ul>
+				<li class="selected" id="home">
+					<a href="index.html">Home</a>
+				</li>
+				<li id="userguide">
+					<a href="userguide/userguide.html">Userguide</a>
+				</li>
+				<li id="documentation">
+					<a href="documentation/documentation.html">Documentation</a>
+				</li>
+				<li id="download">
+					<a href="download/download.html">Download</a>
+				</li>
+				<li id="about">
+					<a href="about/about.html">About</a>
+				</li>
+			</ul>
+		</div>
+<?xml version="1.0" encoding="UTF-8"?>
 
-    <div class="download">
-      <a href="http://github.com/waterman/Patterson/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/waterman/Patterson/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
-    </div>
-
-    <h1><a href="http://github.com/waterman/Patterson">Patterson</a>
-      <span class="small">by <a href="http://github.com/waterman">waterman</a></span></h1>
-
-    <div class="description">
-      A programmers (webpage) generator using groovy templates.
-    </div>
-
-    <h2>Authors</h2>
-<p>waterman (127.0.0.2@gmx.net)<br/><br/>      </p>
-<h2>Contact</h2>
-<p> (127.0.0.2@gmx.net)<br/>      </p>
-
-
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="http://github.com/waterman/Patterson/zipball/master">zip</a> or
-      <a href="http://github.com/waterman/Patterson/tarball/master">tar</a> formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/waterman/Patterson</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/waterman/Patterson">waterman/Patterson</a>
-    </div>
-
+	
   </div>
 
+	
+		  <div id="intro">
+    <div id="intro-msg">
+      <h1>Welcome to Patterson</h1>
+      <p><strong>Patterson</strong> is a generator, typically for static websites. The generator features:</p>
+      <ul>
+      	<li>resources to be Groovy templates, making it extremely flexible</li>
+      	<li>an multi-level "include" mechanism for templates, enabling re-use of page fragments</li>
+      	<li>support for generating image galleries</li>
+      	<li>simple menu building facility</li>
+      	<li>relative link target calculation, required when re-using templates from different locations</li>
+      </ul>
+    </div>
+    <div id="intro-pic">
+      <div align="left">
+      	<img src="assets/intro-pic.png" alt="intro" />
+      </div>
+    </div>
+  </div>
+
+    
+    
+  <div id="content-wrap">
+	
+	      <div id="sbar-wrap">
+      <div id="sbar">
+        <div class="widgetspace">
+          <h1>Facts</h1>
+          <table>
+          	<tr><td>Implementation Language:</td><td>Java</td></tr>
+          	<tr><td>Operation System:</td><td>independent</td></tr>
+          	<tr><td>License:</td><td>MIT/X11</td></tr>
+          </table>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+
+    
   
+      <div id="homecontent">
+  
+
+
+	<h2>Motivation - a little bit of history...</h2>
+    Why another template engine? The answer lays in my past experiences: Depending on what you need, creating small homepages can be quite hard:
+    <ul>
+    <li> 
+    Tools for generating static HTML pages are usually made for users without HTML knowledge. 
+    These tools are typically less flexible, because the rely on certain custom templates formats. 
+    </li>   
+    <li>
+    CMS like Drupal, Joomla, Wordpress etc. are usually oversized for small sites: To get what you want, you have to customize themes, need deep knowledge of the respective CMS. 
+    Some features, likes image galleries, are usually not part of the core system, but require plugins, which require certain version of the core and even worse: often dont provide the expected behaviour out of the box.
+    Furthermore: For deployment, you need a more expensive hosting solution including database access and you have to be aware of security issues, must upgrade to new versions on every security hole.
+    Keeping backups of your data also requires much work.
+    </li>
+    <li>
+    Using online services like blogs, you are tied to the features of the bloging software, usually less flexible in Look and Feel and you have to hand out your content to third-parties, which might not be what you want.
+    </li>
+    <li>
+    When hand crafting HTML pages, you have no template or include mechanism (apart from HTML-Frames) and you are forced to create HTML pages using copy-and-paste, which is a nightmare to maintain.
+    </li>
+    </ul>
+    <p>
+    So, frustrated from the solutions above, I decided to write a generator for static websites including a simple template mechanism. Patterson was born... ;-) 
+    </p>
+		<!-- End homecontent -->
+  		   </div>
+ 
+      <div class="clearfix"></div>
+      
+  <!-- End content-wrap -->    
+  </div>
+  
+  <div id="content-bottom">
+    <div id="footer"> &copy; 2010 <strong>waterman</strong> | Design by: <a href="http://www.themebin.com/">ThemeBin</a> </div>
+  </div>
+  
+<!-- End Wrap -->
+</div>
 </body>
 </html>

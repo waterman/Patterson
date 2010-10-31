@@ -1,0 +1,125 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../assets/style.css" media="all"  />
+<!-- WIN IE Style Sheets -->
+<!--[if IE]>
+  <![if gte IE 5.5]>
+   <![if gte IE 7]><link rel="stylesheet" 
+	type="text/css" media="screen,projection" 
+	href="../assets/ie.css" />
+	<![endif]>
+   <![if lt IE 7]><link rel="stylesheet" 
+	type="text/css" media="screen,projection" 
+	href="../ie.css" />
+	<![endif]>
+  <![endif]>
+  <![if lt IE 5.5]>
+   <link rel="stylesheet"
+	type="text/css" media="screen,projection" 
+	href="../assets/ie.css" />
+    <![endif]>
+<![endif]-->
+<title>Patterson</title>
+</head>
+<body>
+<div id="wrap">
+  <div id="header">
+    <div id="title"><img src="../assets/Logo.gif"/></div>
+    <div id="tagline">A programmers (webpage) generator using Groovy templates</div>
+  </div>
+  <div id="nav">
+  
+  	
+  		
+  	
+  	
+    <?xml version="1.0" encoding="UTF-8"?>
+
+		<?xml version="1.0" encoding="UTF-8"?>
+<div id="nbar">
+			<ul>
+				<li id="home">
+					<a href="../index.html">Home</a>
+				</li>
+				<li class="selected" id="userguide">
+					<a href="userguide.html">Userguide</a>
+				</li>
+				<li id="documentation">
+					<a href="../documentation/documentation.html">Documentation</a>
+				</li>
+				<li id="download">
+					<a href="../download/download.html">Download</a>
+				</li>
+				<li id="about">
+					<a href="../about/about.html">About</a>
+				</li>
+			</ul>
+		</div>
+<?xml version="1.0" encoding="UTF-8"?>
+
+	
+  </div>
+
+	
+    
+  <div id="content-wrap">
+	
+  
+      <div id="homecontent">
+  
+ 
+    
+    <h2>Quickstart</h2>
+    <h3>Structure of resources</h3>
+    <p>
+    To generate a website using Patterson you organize the files making up your site in in source directory. 
+    The layout of the source directory corresponds to the directory structure of the finally generated site. 
+    Patterson walks along the source directory and copies the files to a target directory. 
+    Files which are recognized as templates are evaluated before copied.
+    </p>
+    The default directory structure for Patterson is as follows:
+    <pre class="sample">
+    +--+ site/ <span class="inlineComment">/*default source folder containing the templates and resources*/</span>
+       +--+ myFolder1/
+          +-- myFile1.groovy.html
+          +-- myImage1.gif  
+    +--+ build/ <span class="inlineComment">/*default target folder containing the finally generated site*/</span>
+       +--+ myFolder1/
+          +-- myFile1.html
+          +-- myImage1.gif
+    +-- build.xml <span class="inlineComment">/*optional ant build file, calling the generator*/</span>
+    </pre>
+    <h3>Template processing</h3>
+    <p>Patterson assumes, that files in the source directory having a name like &lt;filename&gt;.groovy.&lt;extension&gt; 
+    are Groovy templates. These templates are evaluated, the ".groovy" part of the filename is removed and the result of the template
+    is copied to its corresponding folder in the target folder.
+    </p>  
+    <h3>Template features</h3>
+    <p>
+    Groovy templates are a mixture of plain target content and Groovy code. The Groovy code typically adds content dynamically.
+    Several helper Objects are available in the context of each template:
+    <table class="datatable">
+    	<tr class="odd"><th>Variable name</th><th>Description</th></tr>
+    	<tr class="even"><td>generator</td><td>The generator object itself, providing access to the entire generator runtime</td></tr>
+    	<tr class="odd"><td>templateSupport</td><td>Providing methods usefull for templates</td></tr>
+    </table> 
+    </p>
+		<!-- End homecontent -->
+  		   </div>
+ 
+      <div class="clearfix"></div>
+      
+  <!-- End content-wrap -->    
+  </div>
+  
+  <div id="content-bottom">
+    <div id="footer"> &copy; 2010 <strong>waterman</strong> | Design by: <a href="http://www.themebin.com/">ThemeBin</a> </div>
+  </div>
+  
+<!-- End Wrap -->
+</div>
+</body>
+</html>

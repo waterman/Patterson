@@ -1,0 +1,13 @@
+    <div id="sbar-wrap">
+      <div id="sbar">
+        <div class="widgetspace">
+          <h1>Facts</h1>
+          <table>
+          	<tr><td>Implementation Language:</td><td>Java</td></tr>
+          	<tr><td>Operation System:</td><td>independent</td></tr>
+          	<tr><td>License:</td><td>MIT/X11</td></tr>
+          </table>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
