@@ -24,17 +24,19 @@ package org.patterson;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Map;
 
 public interface Processor {
 
 	/**
 	 * @param aGenerator
 	 * @param aFile
+	 * @param aBinding
 	 * @throws IOException
 	 * @throws WebsiteGeneratorException
 	 * @throws WebsiteGeneratorException
 	 */
-	void process(WebsiteGenerator aGenerator, File aFile) throws IOException,
+	void process(WebsiteGenerator aGenerator, File aFile, Map<?, ?> aBinding) throws IOException,
 			WebsiteGeneratorException;
 
 }

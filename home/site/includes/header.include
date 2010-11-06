@@ -3,6 +3,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="${generator.calulateRelativeUrlFromCurrentResourceTo('${srcDir}/assets/style.css')}" media="all"  />
+<% if (binding['includeIntro'] != null && binding['includeSidebar'] == true) { %>
+	<link rel="stylesheet" type="text/css" href="${generator.calulateRelativeUrlFromCurrentResourceTo('${srcDir}/assets/style-sidebar.css')}" media="all"  />
+<% }%>
+
 <!-- WIN IE Style Sheets -->
 <!--[if IE]>
   <![if gte IE 5.5]>
@@ -43,7 +47,9 @@
     <% }%>
     
   <div id="content-wrap">
-  ${templateSupport.evalTemplate(binding,'${srcDir}/includes/sidebar.include')}
+	<% if (binding['includeIntro'] != null && binding['includeIntro'] == true) { %>
+	  ${templateSupport.evalTemplate(binding,'${srcDir}/includes/sidebar.include')}
+    <% }%>
   
       <div id="homecontent">
   

@@ -10,10 +10,10 @@
 					<a
 						href="${generator.calulateRelativeUrlFromCurrentResourceTo('${srcDir}/userguide/userguide.html')}">Userguide</a>
 				</li>
-				<li id="documentation">
+				<!-- li id="documentation">
 					<a
 						href="${generator.calulateRelativeUrlFromCurrentResourceTo('${srcDir}/documentation/documentation.html')}">Documentation</a>
-				</li>
+				</li -->
 				<li id="download">
 					<a
 						href="${generator.calulateRelativeUrlFromCurrentResourceTo('${srcDir}/download/download.html')}">Download</a>

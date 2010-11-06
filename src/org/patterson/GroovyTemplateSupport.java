@@ -79,14 +79,7 @@ public class GroovyTemplateSupport {
 		} catch (GroovyRuntimeException e) {
 			throw new WebsiteGeneratorException("RuntimeException in Groovy template: '" + aTemplateSource + "'.", e);
 		}
-		Map tempBinding = new HashMap();
-		tempBinding.putAll(generator.getSettings().asMap());
-		if (aBinding != null) {
-			tempBinding.putAll(aBinding);
-		}
-		tempBinding.put("generator", generator);
-		tempBinding.put("templateSupport", this);
-		tempBinding.put("binding", tempBinding);
+		Map<?,?> tempBinding = createBinding(aBinding);
 		Writable tempMake = tempTemplate.make(tempBinding);
 
 		if (isConvertToEntities()) {
@@ -104,6 +97,19 @@ public class GroovyTemplateSupport {
 		} else {
 			tempMake.writeTo(anOutputWriter);
 		}
+	}
+	
+	@SuppressWarnings("unchecked")
+	private Map<?,?> createBinding(Map<?, ?> aBinding) {
+		Map tempBinding = new HashMap();
+		tempBinding.putAll(generator.getSettings().asMap());
+		if (aBinding != null) {
+			tempBinding.putAll(aBinding);
+		}
+		tempBinding.put("generator", generator);
+		tempBinding.put("templateSupport", this);
+		tempBinding.put("binding", tempBinding);
+		return tempBinding;
 	}
 
 	private boolean isConvertToEntities() {
@@ -135,6 +141,11 @@ public class GroovyTemplateSupport {
 			throw new WebsiteGeneratorException("Parsing of Groovy Script for file faild: '" + aFile.getAbsolutePath()
 					+ "'.", e);
 		}
+	}
+	
+	public String urlTo(String aResource){
+		String tempUrl = generator.calulateRelativeUrlFromCurrentResourceTo(aResource);
+		return tempUrl;
 	}
 
 }

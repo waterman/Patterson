@@ -1,14 +1,12 @@
     <div id="sbar-wrap">
       <div id="sbar">
         <div class="widgetspace">
-          <h1>Sidebar Links</h1>
-          <ul class="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="http://teachmelinux.googlepages.com">Teach Me Linux</a></li>
-            <li><a href="http://deviantart.com">deviantART</a></li>
-            <li><a href="http://gigacore.deviantart.com">Gigacore</a></li>
-            <li><a href="http://digg.com/">Digg</a></li>
-          </ul>
+          <h1>Facts</h1>
+          <table>
+          	<tr><td>Implementation Language:</td><td>Java</td></tr>
+          	<tr><td>Operation System:</td><td>independent</td></tr>
+          	<tr><td>License:</td><td>MIT/X11</td></tr>
+          </table>
         </div>
         <div class="clearfix"></div>
       </div>

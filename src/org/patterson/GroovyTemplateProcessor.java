@@ -26,6 +26,8 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -60,7 +62,7 @@ public class GroovyTemplateProcessor implements TemplateProcessor {
 	 *      File)
 	 */
 	@Override
-	public void process(WebsiteGenerator aGenerator, File aFile) throws IOException, WebsiteGeneratorException {
+	public void process(WebsiteGenerator aGenerator, File aFile, Map aBinding) throws IOException, WebsiteGeneratorException {
 
 		if (isTemplate(aFile)) {
 			logger.fine("Processing template: " + aFile.getAbsolutePath());
@@ -84,7 +86,7 @@ public class GroovyTemplateProcessor implements TemplateProcessor {
 			throw new WebsiteGeneratorException("Intantiation of Groovy Object for file faild: '"
 					+ aFile.getAbsolutePath() + "'.", e);
 		}
-		tempProcessor.process(generator, aFile);
+		tempProcessor.process(generator, aFile, new HashMap());
 	}
 
 	private void processTemplate(File aSrcFile) throws IOException, WebsiteGeneratorException {

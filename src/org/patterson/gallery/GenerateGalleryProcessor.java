@@ -104,7 +104,7 @@ public class GenerateGalleryProcessor implements Processor {
 
 		String tempPath = aGenerator.getCurrentResource().getAbsoluteSourcePath();
 		File tempFile = new File(tempPath);
-		tempGalleryProcessor.process(aGenerator, tempFile);
+		tempGalleryProcessor.process(aGenerator, tempFile, aBinding);
 	}
 
 	private WebsiteGenerator generator;
@@ -124,7 +124,7 @@ public class GenerateGalleryProcessor implements Processor {
 	 *            A File in the directory containing the images
 	 */
 	@Override
-	public void process(WebsiteGenerator aGenerator, File aFile) throws IOException, WebsiteGeneratorException {
+	public void process(WebsiteGenerator aGenerator, File aFile, Map aBinding) throws IOException, WebsiteGeneratorException {
 		logger.info("Processing gallery: " + aFile.getAbsolutePath());
 		generator = aGenerator;
 		galleryPlaceholder = aGenerator.createInitResource(aFile);
@@ -438,5 +438,6 @@ public class GenerateGalleryProcessor implements Processor {
 
 	public void write(String str) throws IOException {
 		writer.write(str);
+		writer.flush();// TODO: remove
 	}
 }

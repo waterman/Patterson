@@ -1,0 +1,5 @@
+public class Processor implements org.patterson.Processor{
+	public void process(org.patterson.WebsiteGenerator aGenerator, java.io.File aFile, java.util.Map aBinding){
+		org.patterson.gallery.GenerateGalleryProcessor.run(aGenerator,aBinding);
+	}
+}

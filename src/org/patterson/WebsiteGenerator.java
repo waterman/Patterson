@@ -59,7 +59,6 @@ public class WebsiteGenerator {
 	public WebsiteGenerator(InputStream aPropertiesStream) throws IOException, ConfigurationException {
 		Properties tempProps = new Properties();
 		tempProps.load(aPropertiesStream);
-		aPropertiesStream.close();
 		init(tempProps);
 	}
 
@@ -118,7 +117,7 @@ public class WebsiteGenerator {
 			} else if (processor.isCopyFile(tempFile)) {
 				copyFileToTargetDir(tempFile);
 			} else if (processor.isProcessingRequired(tempFile)) {
-				processor.process(this, tempFile);
+				processor.process(this, tempFile, null);
 			} else {
 				// Maybe a resource referenced by a velocity template
 				logger.fine("Skipping velocity resource " + tempFile.getAbsolutePath());
@@ -250,18 +249,33 @@ public class WebsiteGenerator {
 
 	public static void main(String[] args) throws WebsiteGeneratorException, IOException, ConfigurationException {
 		WebsiteGenerator tempGenerator;
+		InputStream tempIn = null;
 		if (args.length != 1) {
+			File tempProps = new File("patterson.properties");
+			if (tempProps.exists()) {
+				tempIn = createFileInputStream(tempProps.getName());
+			}
+		} else {
+			tempIn = createFileInputStream(args[0]);
+		}
+
+		if (tempIn == null) {
 			tempGenerator = new WebsiteGenerator(new Properties());
 		} else {
-			InputStream tempIn;
-			try {
-				tempIn = new FileInputStream(args[0]);
-			} catch (FileNotFoundException e) {
-				throw new WebsiteGeneratorException("Properties file '" + args[0] + "' not found.", e);
-			}
 			tempGenerator = new WebsiteGenerator(tempIn);
+			tempIn.close();
 		}
 		tempGenerator.generate();
+	}
+
+	private static InputStream createFileInputStream(String aFileName) throws WebsiteGeneratorException {
+		InputStream tempIn;
+		try {
+			tempIn = new FileInputStream(aFileName);
+		} catch (FileNotFoundException e) {
+			throw new WebsiteGeneratorException("Properties file '" + aFileName + "' not found.", e);
+		}
+		return tempIn;
 	}
 
 	public Resource createResource() {

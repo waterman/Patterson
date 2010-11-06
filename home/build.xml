@@ -22,6 +22,12 @@
 		<java classname="org.patterson.WebsiteGenerator" classpathref="classpath">
 			<sysproperty key="java.util.logging.config.file" value="${basedir}/lib/logging.properties"/>
 		</java>
+		<move todir="../../Patterson-Pages">
+		    <fileset dir="../../Patterson-Pages/build">
+		      <include name="**/*"/>
+		    </fileset>
+		</move>
+		<delete dir="../../Patterson-Pages/build"></delete>
 	</target>
 
 </project>
