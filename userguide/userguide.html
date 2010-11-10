@@ -4,6 +4,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="stylesheet" type="text/css" href="../assets/style.css" media="all"  />
+
+
 <!-- WIN IE Style Sheets -->
 <!--[if IE]>
   <![if gte IE 5.5]>
@@ -47,9 +49,10 @@
 				<li class="selected" id="userguide">
 					<a href="userguide.html">Userguide</a>
 				</li>
-				<li id="documentation">
-					<a href="../documentation/documentation.html">Documentation</a>
-				</li>
+				<!-- li id="documentation">
+					<a
+						href="../documentation/documentation.html">Documentation</a>
+				</li -->
 				<li id="download">
 					<a href="../download/download.html">Download</a>
 				</li>
@@ -75,22 +78,22 @@
     <h2>Quickstart</h2>
     <h3>Structure of resources</h3>
     <p>
-    To generate a website using Patterson you organize the files making up your site in in source directory. 
+    To generate a website using Patterson you organize the files making up your site in a source directory. 
     The layout of the source directory corresponds to the directory structure of the finally generated site. 
     Patterson walks along the source directory and copies the files to a target directory. 
     Files which are recognized as templates are evaluated before copied.
     </p>
     The default directory structure for Patterson is as follows:
     <pre class="sample">
-    +--+ site/ <span class="inlineComment">/*default source folder containing the templates and resources*/</span>
-       +--+ myFolder1/
-          +-- myFile1.groovy.html
-          +-- myImage1.gif  
-    +--+ build/ <span class="inlineComment">/*default target folder containing the finally generated site*/</span>
-       +--+ myFolder1/
-          +-- myFile1.html
-          +-- myImage1.gif
-    +-- build.xml <span class="inlineComment">/*optional ant build file, calling the generator*/</span>
++--+ site/ <span class="inlineComment">/*default source folder containing the templates and resources*/</span>
+   +--+ myFolder1/
+      +-- myFile1.groovy.html
+      +-- myImage1.gif  
++--+ build/ <span class="inlineComment">/*default target folder containing the finally generated site*/</span>
+   +--+ myFolder1/
+      +-- myFile1.html
+      +-- myImage1.gif
++-- build.xml <span class="inlineComment">/*optional ant build file, calling the generator*/</span>
     </pre>
     <h3>Template processing</h3>
     <p>Patterson assumes, that files in the source directory having a name like &lt;filename&gt;.groovy.&lt;extension&gt; 
@@ -99,13 +102,45 @@
     </p>  
     <h3>Template features</h3>
     <p>
-    Groovy templates are a mixture of plain target content and Groovy code. The Groovy code typically adds content dynamically.
-    Several helper Objects are available in the context of each template:
+    Groovy templates are a mixture of plain content -for example HTML- and Groovy code. The Groovy code typically adds or omits content dynamically.
+    Please have a look at the <a href="http://groovy.codehaus.org">Groovy</a> <a href="http://groovy.codehaus.org/???">Template documentation</a> for a general information about Groovy and Template.
+    </p>
+    <p>
+    Patterson provides access to several helper objects in the context of each template:
     <table class="datatable">
     	<tr class="odd"><th>Variable name</th><th>Description</th></tr>
     	<tr class="even"><td>generator</td><td>The generator object itself, providing access to the entire generator runtime</td></tr>
-    	<tr class="odd"><td>templateSupport</td><td>Providing methods usefull for templates</td></tr>
+    	<tr class="odd"><td>templateSupport</td><td>Providing methods useful for templates</td></tr>
+    	<tr class="odd"><td>binding</td><td>A map which carries arbitrary user objects. Use this map to control the dynamic behaviour of your template. 
+    	The binding map is initialized with the settings of the generator and the settings of the current resource.
+    	Each template gets its own binding. You can pass on the binding this binding to make it available to the included templates.
+    	</td></tr>
     </table> 
+    </p>
+    <h4>Including other templates</h4>
+    You can use the <span class="inlineCode">templateSupport</span> from within your template to include other templates as follows:
+    <pre class="sample">
+${templateSupport.evalTemplate(binding,'${srcDir}/includes/header.include')}
+    </pre>
+    <h4>Calculating the URL to other resources</h4> 
+    <p>
+    When including templates like menu bars or headers, the URLs in these fragments usually dependent on the location of the including resource.
+    You can use the <span class="inlineCode">templateSupport</span> to calculate the correct relative URL from the current resource to another:  
+    </p>
+    <pre class="sample">
+&lt;img src="${templateSupport.urlTo('${srcDir}/assets/Logo.gif')}"/&gt;
+    </pre>
+    <h4>Images galleries</h4> 
+    <p>
+    Patterson has build-in support for generating image galleries. Put all the images for the gallery into one folder, along with the corresponding thumbnails.
+    Images and thumbnails are copied unchanged to the target, so it is required for them to have to expected dimensions.
+    Put an additional template with content like below in the same directory to generate a gallery:   
+    </p>
+    <pre class="sample">
+${org.patterson.gallery.GenerateGalleryProcessor.run(generator,binding); }
+    </pre>
+    <p>
+    Here is a <a href="sample-gallery/index.html">sample gallery</a> generated by Patterson.
     </p>
 		<!-- End homecontent -->
   		   </div>

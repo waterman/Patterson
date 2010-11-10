@@ -11,7 +11,7 @@
 body {
 	background: #666;
 	margin: 0;
-	font: 100%/150% Geneva, Arial, Helvetica, sans-serif;
+	font: 100%/125% Geneva, Arial, Helvetica, sans-serif;
 	color: #000;
 }
 
@@ -240,9 +240,7 @@ a:hover {
 }
 
 #homecontent {
-	width: 640px;
 	margin: 10px 10px 0 10px;
-	text-align: justify;
 	font-size: 12px;
 }
 
@@ -594,9 +592,99 @@ table.datatable tbody tr.even{
 .inlineComment{
 	color: #009900;
 }
+.inlineCode{
+	font-family: monospace;
+}
 
 pre.sample{
 	background-color: #F4F4F4;
 	border: 1px solid #E2E2E2;
-	padding-top: 5px;
+	padding-top: 20px;
+	padding-bottom: 0px;
+	padding-left: 10px;
+	font-family: monospace;
+}
+
+
+img{
+	vertical-align: middle;	
+}
+
+td.wsgPreviewImageCell{
+	border:thin solid grey;
+	text-align: center;
+	padding: 5px;
+}
+
+td.wsgPreviewImageCellEmpty, td.wsgPreviewImageCell{
+	width: 130px;
+}
+
+#wsgPreviewCurrent{
+	border-color: green;
+	border-width:2px;
+	background-color: #F0F0F0;
+}
+
+#wsgIndexPanel table, #wsgImagePanel table{
+	border-collapse:separate;
+	border-spacing:5px;
+}
+
+#wsgImagePanel table{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#wsgImagePanel, #wsgIndexPanel{
+	text-align: center;	
+}
+
+/** Center main image */
+#wsgImageItemPanel{
+	text-align: center;
+}
+
+
+#wsgIndexNavBw, #wsgImageNavBw{
+	float:left;
+}
+
+#wsgIndexNavFw, #wsgImageNavFw{
+	float:right;
+}
+
+#wsgRelativeImageNav, #wsgRelativeIndexNav{
+	text-align:center;	
+}
+
+#wsgImageContent, #wsgIndexContent{
+	display:inline-block;
+}
+
+#wsgImageNavFwLabel, #wsgImageNavBwLabel, #wsgIndexNavFwLabel, #wsgIndexNavBwLabel{
+	display: none;
+}
+
+#wsgImageNavFwImage, #wsgIndexNavFwImage,#wsgImageNavBwImage, #wsgIndexNavBwImage{
+	background-repeat: no-repeat;
+	background-position: center;
+	padding-left:12px;
+	padding-right:12px;
+	padding-top:2px;
+	padding-bottom:2px;
+}
+
+#wsgImageNavFwImage, #wsgIndexNavFwImage{
+	background-image:url('ArrowRightOlive.gif');
+}
+
+#wsgImageNavBwImage, #wsgIndexNavBwImage{
+	background-image:url('ArrowLeftOlive.gif');
+}
+
+#wsgRelativeImageNav{
+	height: 25px;
+	padding-top:2px;
+	padding-bottom:2px;
 }
